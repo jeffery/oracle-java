@@ -12,7 +12,7 @@ exitWithMessage()
 printUsage()
 {
 	echo Usage:  `basename $1` PATH_TO_DOWNLOADED_TGZ
-	echo Example: `basename $1` ~/Downloads/jdk-7u4-linux-x64.tar.gz
+	echo Example: `basename $1` ~/Downloads/jdk-7u17-linux-x64.tar.gz
 	exit 127
 }
 
