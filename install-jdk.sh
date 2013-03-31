@@ -223,9 +223,9 @@ setupJavaCompilerAlternatives()
 	local jdkSymbolicPath="$2"
 	local jvmExportsPath="$3"
 
-	local executableFiles="appletviewer apt extcheck idlj jar jarsigner javadoc javafxpackager javah javap jcmd jconsole jdb
-	jhat jinfo jmap jps jrunscript jsadebugd jstack jstat jstatd native2ascii pack200 rmic schemagen serialver unpack200
-	wsgen wsimport xjc"
+	local executableFiles="appletviewer apt extcheck idlj jar jarsigner javadoc javafxpackager javah javap jcmd jconsole
+	jdb jhat jinfo jmap jps jrunscript jsadebugd jstack jstat jstatd native2ascii pack200 rmic schemagen serialver
+	unpack200 wsgen wsimport xjc"
 
 	sudo /usr/sbin/update-alternatives \
 	--install /usr/bin/javac javac $jdkSymbolicPath/bin/javac 3 \
