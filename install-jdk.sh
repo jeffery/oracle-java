@@ -186,7 +186,7 @@ updateJavaApplicationAlternatives()
 {
 	local jdkSymbolicPath="$1"
 	local libPath="$2"
-	local binaryFiles="java-rmi.cgi jvisualvm keytool orbd policytool rmid rmiregistry servertool tnameserv"
+	local executableFiles="java-rmi.cgi jvisualvm keytool orbd policytool rmid rmiregistry servertool tnameserv"
 	
 	sudo /usr/sbin/update-alternatives \
 	--install /usr/bin/java java $jdkSymbolicPath/bin/java 3 \
@@ -195,7 +195,7 @@ updateJavaApplicationAlternatives()
 	--slave $libPath/jvm/jre jre $jdkSymbolicPath/jre \
 	--slave $libPath/jvm-exports/jre jre_exports $libPath/jvm-exports/jdk_Oracle \
 	\
-	$(createJavaAlternativesCommand "$binaryFiles" "$jdkSymbolicPath")
+	$(createJavaAlternativesCommand "$executableFiles" "$jdkSymbolicPath")
 }
 
 updateJavaCompilerAlternatives()
@@ -204,7 +204,7 @@ updateJavaCompilerAlternatives()
 	local jdkSymbolicPath="$2"
 	local jvmExportsPath="$3"
 
-	local binaryFiles="appletviewer apt extcheck idlj jar jarsigner javadoc javafxpackager javah javap jcmd jconsole jdb
+	local executableFiles="appletviewer apt extcheck idlj jar jarsigner javadoc javafxpackager javah javap jcmd jconsole jdb
 	jhat jinfo jmap jps jrunscript jsadebugd jstack jstat jstatd native2ascii pack200 rmic schemagen serialver unpack200
 	wsgen wsimport xjc"
 
@@ -214,7 +214,7 @@ updateJavaCompilerAlternatives()
 	\
 	--slave $libPath/jvm/java java_sdk $jdkSymbolicPath \
 	--slave $libPath/jvm-exports/java java_sdk_exports $jvmExportsPath \
-	$(createJavaAlternativesCommand "$binaryFiles" "$jdkSymbolicPath")
+	$(createJavaAlternativesCommand "$executableFiles" "$jdkSymbolicPath")
 }
 
 updateBrowserPluginAlternatives()
