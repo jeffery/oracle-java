@@ -182,7 +182,7 @@ createJavaAlternativesCommand()
 	echo "$alternativesCommand"
 }
 
-updateJavaApplicationAlternatives()
+setupJavaApplicationAlternatives()
 {
 	local jdkSymbolicPath="$1"
 	local libPath="$2"
@@ -198,7 +198,7 @@ updateJavaApplicationAlternatives()
 	$(createJavaAlternativesCommand "$executableFiles" "$jdkSymbolicPath")
 }
 
-updateJavaCompilerAlternatives()
+setupJavaCompilerAlternatives()
 {
 	local libPath="$1"
 	local jdkSymbolicPath="$2"
@@ -217,7 +217,7 @@ updateJavaCompilerAlternatives()
 	$(createJavaAlternativesCommand "$executableFiles" "$jdkSymbolicPath")
 }
 
-updateBrowserPluginAlternatives()
+setupBrowserPluginAlternatives()
 {
 	local arch="$1"
 	local jdkSymbolicPath="$2"
@@ -302,13 +302,13 @@ startInstallation()
 	$(setupJvmExports "$jvmExportsPath" "$jdkSymbolicPath" "$javaFullVersion" "$javaVersion" || 
 		exitWithMessage "Could not create JVM export symlinks")
 
-	updateJavaApplicationAlternatives "$jdkSymbolicPath" "$libPath" || 
+	setupJavaApplicationAlternatives "$jdkSymbolicPath" "$libPath" ||
 		exitWithMessage "Failed updating Application alternatives"
 	
-	updateJavaCompilerAlternatives "$libPath" "$jdkSymbolicPath" "$jvmExportsPath" ||
+	setupJavaCompilerAlternatives "$libPath" "$jdkSymbolicPath" "$jvmExportsPath" ||
 		exitWithMessage "Failed updating Compiler alternatives"
 
-	updateBrowserPluginAlternatives "$arch" "$jdkSymbolicPath" "$libPath" || 
+	setupBrowserPluginAlternatives "$arch" "$jdkSymbolicPath" "$libPath" ||
 		exitWithMessage "Failed updating Plugin alternatives"
 
 	setupJavaControlPanel "$jdkSymbolicPath" ||
