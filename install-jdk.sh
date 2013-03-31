@@ -1,4 +1,10 @@
 #!/bin/bash
+: '
+Project: https://github.com/jeffery/oracle-java
+Author: Jeffery Fernandez
+Date: 31-03-2013
+Copyright: 2013
+'
 
 set -e
 
