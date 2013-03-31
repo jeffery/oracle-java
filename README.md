@@ -3,7 +3,7 @@ oracle-java
 
 The Oracle JDK installer for openSUSE Linux
 
-Download the tar.gz from Oracle website
+Download the JDK tar.gz from Oracle website
 =
   http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
