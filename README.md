@@ -41,3 +41,7 @@ Verify the new version is installed
     java version "1.7.0_17"
     Java(TM) SE Runtime Environment (build 1.7.0_17-b02)
     Java HotSpot(TM) 64-Bit Server VM (build 23.7-b01, mixed mode)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jeffery/oracle-java/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
