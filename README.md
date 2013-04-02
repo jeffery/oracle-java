@@ -10,7 +10,7 @@ Download the JDK tar.gz from Oracle website
 Download the jdk installer script
 =
 
-    wget https://raw.github.com/jeffery/oracle-java/master/install-jdk.sh
+    $ wget https://raw.github.com/jeffery/oracle-java/master/install-jdk.sh
 
 Run the script as root user
 =
