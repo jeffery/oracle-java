@@ -5,7 +5,7 @@ The Oracle JDK installer for openSUSE Linux
 
 Compatability
 =
-openSUSE: 12.3, 13.1
+openSUSE: 12.3, 13.1, 42.2
 
 Oracle Java: 1.7, 1.8
 
